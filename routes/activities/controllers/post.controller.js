@@ -1,5 +1,5 @@
 let { body } = require("express-validator");
-const { createActivity, updateActivity } = require("../../../controllers/activitiesControllers");
+const { createActivity } = require("../../../controllers/activitiesControllers");
 
 const postActivity = [
   body("name", "Ingrese un nombre").exists().notEmpty(),
@@ -7,6 +7,4 @@ const postActivity = [
   createActivity,
 ];
 
-
-module.exports = { postActivity, updateActivity };
-
+module.exports = { postActivity };
